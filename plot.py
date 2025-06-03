@@ -55,7 +55,7 @@ class Operator:
         for hand in hands:
             landmarks = np.array(hand['landmarks'])
             flag = hand['flag']
-            if flag > 0.5:
+            if flag > 0.9:
                 draw_landmarks(image, landmarks[:,:2], HAND_CONNECTIONS, size=2)
         '''
         cv2.putText(
@@ -74,7 +74,9 @@ class Operator:
             cv2.imshow("frame", image)
             if cv2.waitKey(1) & 0xFF == ord("q"):
                 return DoraStatus.STOP
-
+        # clear buffer of the step we plotted
+        del self.images[timestamp]
+        del self.detections[timestamp]
 
     def on_event(
         self,

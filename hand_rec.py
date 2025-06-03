@@ -139,11 +139,10 @@ class Operator:
                 # denormalize landmarks to plot using affine transform
                 landmarks = self.hand_regressor.denormalize_landmarks(normalized_landmarks.cpu(), affine)
             
-                # Serialize to Arrow table if len(flags) > 0
+                # pack each detection (seen in `flags`) into my custom arrow struct
                 if len(flags) > 0:
                     hands_data = []
                     for i, flag in enumerate(flags):
-                        #if flag > 0.5:
                         hands_data.append(
                             make_hand_dict(box[i], flags[i], handed[i], landmarks[i])
                         )
@@ -155,10 +154,9 @@ class Operator:
                     sink = pa.BufferOutputStream()
                     with ipc.new_stream(sink, schema) as writer:
                         writer.write_table(batch)
-                        
-
                     msg_bytes = sink.getvalue().to_pybytes()
 
+                    # place the bytes into a pa array so they're all sent at once
                     msg_array = pa.array([msg_bytes], type=pa.binary())
 
                     send_output(
@@ -166,11 +164,7 @@ class Operator:
                         msg_array,
                         dora_event["metadata"],
                         )
-                '''send_output(
-                "image",
-                pa.array(image.ravel()),
-                dora_event["metadata"],
-                )'''
+            
             elif event_type == "STOP":
                 print("received stop")
             else:

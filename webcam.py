@@ -33,7 +33,7 @@ class Operator:
         send_output,
     ) -> DoraStatus:
         event_type = dora_event["type"]
-        metadata = dora_event["metadata"]
+        metadata = dora_event.get("metadata", {})
         if event_type == "INPUT":
             ret, frame = self.video_capture.read()
             if ret:
