@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import dora; dora.start_runtime() # webcam
+                 ~~~~~~~~~~~~~~~~~~^^
+RuntimeError: Dora Runtime raised an error.
+
+Caused by:
+   0: main task failed
+   1: failed to init event stream
+   2: subscribe failed: Node plot exited before initializing dora. For more information, run `dora logs 0197375b-2824-732f-9e21-9141b18c7089 plot`.
+
+Location:
+    apis/rust/node/src/event_stream/mod.rs:139:17

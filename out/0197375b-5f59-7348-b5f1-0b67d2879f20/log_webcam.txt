@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import dora; dora.start_runtime() # webcam
+                 ~~~~~~~~~~~~~~~~~~^^
+RuntimeError: Dora Runtime raised an error.
+
+Caused by:
+   0: main task failed
+   1: operator webcam/op raised an error
+   2: error in Python module at /Users/dave/dev/ultra/dora_webcam/webcam.py
+   3: Traceback (most recent call last):
+        File "/Users/dave/dev/ultra/dora_webcam/webcam.py", line 36, in on_event
+          metadata = dora_event["metadata"]
+
+      KeyError: 'metadata'
+
+[2m2025-06-03T19:54:16.507817Z[0m [33m WARN[0m [2mopentelemetry_system_metrics[0m[2m:[0m Could not get NVML, recording 0 for GPU memory usage
+Location:
+    binaries/runtime/src/operator/python.rs:29:9

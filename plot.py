@@ -24,14 +24,57 @@ FONT = cv2.FONT_HERSHEY_SIMPLEX
 
 class Operator:
     """
-    Plot image and bounding box
+    Listen for image and hand detection messages.
+    When an image and a detection are both present for a timestamp, plot them. 
     """
 
     def __init__(self):
-        self.detections = []
+        self.detections = {}
+        self.images = {}
         self.buffer = ""
         self.submitted = []
         self.lines = []
+    
+    def plot(self, timestamp):
+        """
+        When 
+        """
+        raw_img = self.images[timestamp]
+        image = (
+            raw_img.to_numpy().reshape((CAMERA_HEIGHT, CAMERA_WIDTH, 3)).copy()
+        )
+
+        raw_dets = self.detections[timestamp]
+        scalar = raw_dets[0]  # pa.BinaryScalar
+        raw_bytes = scalar.as_buffer().to_pybytes()
+        buf = pa.py_buffer(raw_bytes)
+        reader = ipc.open_stream(buf)
+        table = reader.read_all()
+        hands = [hand.as_py() for hand in table['hands'][0]]
+
+        for hand in hands:
+            landmarks = np.array(hand['landmarks'])
+            flag = hand['flag']
+            if flag > 0.5:
+                draw_landmarks(image, landmarks[:,:2], HAND_CONNECTIONS, size=2)
+        '''
+        cv2.putText(
+            image,
+            f"{LABELS[int(label)]}, {confidence:0.2f}",
+            (int(max_x), int(max_y)),
+            FONT,
+            0.5,
+            (0, 255, 0),
+        )'''
+
+        cv2.putText(
+            image, self.buffer, (20, 14 + 21 * 14), FONT, 0.5, (190, 250, 0), 1
+        )
+        if CI != "true":
+            cv2.imshow("frame", image)
+            if cv2.waitKey(1) & 0xFF == ord("q"):
+                return DoraStatus.STOP
+
 
     def on_event(
         self,
@@ -42,73 +85,17 @@ class Operator:
             id = dora_event["id"]
             value = dora_event["value"]
             metadata = dora_event["metadata"]
+            timestamp = metadata["ts"]
             if id == "image":
+                self.images[timestamp] = value
+                if self.detections.get(timestamp, False):
+                    self.plot(timestamp)
 
-                image = (
-                    value.to_numpy().reshape((CAMERA_HEIGHT, CAMERA_WIDTH, 3)).copy()
-                )
-
-                for hand in self.detections:
-                    landmarks = np.array(hand['landmarks'])
-                    flag = hand['flag']
-                    if flag > 0.5:
-                        draw_landmarks(image, landmarks[:,:2], HAND_CONNECTIONS, size=2)
-                    '''
-                    cv2.putText(
-                        image,
-                        f"{LABELS[int(label)]}, {confidence:0.2f}",
-                        (int(max_x), int(max_y)),
-                        FONT,
-                        0.5,
-                        (0, 255, 0),
-                    )'''
-
-                cv2.putText(
-                    image, self.buffer, (20, 14 + 21 * 14), FONT, 0.5, (190, 250, 0), 1
-                )
-
-                i = 0
-                for text in self.submitted[::-1]:
-                    color = (
-                        (0, 255, 190)
-                        if text["role"] == "user_message"
-                        else (0, 190, 255)
-                    )
-                    cv2.putText(
-                        image,
-                        text["content"],
-                        (
-                            20,
-                            14 + (19 - i) * 14,
-                        ),
-                        FONT,
-                        0.5,
-                        color,
-                        1,
-                    )
-                    i += 1
-
-                for line in self.lines:
-                    cv2.line(
-                        image,
-                        (int(line[0]), int(line[1])),
-                        (int(line[2]), int(line[3])),
-                        (0, 0, 255),
-                        2,
-                    )
-
-                if CI != "true":
-                    cv2.imshow("frame", image)
-                    if cv2.waitKey(1) & 0xFF == ord("q"):
-                        return DoraStatus.STOP
             elif id == "hand_detections":
-                scalar = value[0]  # pa.BinaryScalar
-                raw_bytes = scalar.as_buffer().to_pybytes()
-                buf = pa.py_buffer(raw_bytes)
-                reader = ipc.open_stream(buf)
-                table = reader.read_all()
-                self.detections = [hand.as_py() for hand in table['hands'][0]]
-                print(f"event md = {metadata}")
+                self.detections[timestamp] = value
+                if self.images.get(timestamp, False):
+                    self.plot(timestamp)
+                #print(f"event md = {metadata}")
                 #self.bboxs = value.to_numpy().reshape((-1, 6))
             elif id == "keyboard_buffer":
                 self.buffer = value[0].as_py()
