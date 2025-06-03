@@ -1,0 +1,2 @@
+[2m2025-06-02T23:40:58.180777Z[0m [33m WARN[0m [2mopentelemetry_system_metrics[0m[2m:[0m Could not get NVML, recording 0 for GPU memory usage
+[2m2025-06-02T23:41:28.182963Z[0m [33m WARN[0m [2mopentelemetry_system_metrics[0m[2m:[0m Could not get NVML, recording 0 for GPU memory usage

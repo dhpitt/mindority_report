@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import dora; dora.start_runtime() # plot
+                 ~~~~~~~~~~~~~~~~~~^^
+RuntimeError: Dora Runtime raised an error.
+
+Caused by:
+   0: main task failed
+   1: operator plot/op raised an error
+   2: error in Python module at /Users/dave/dev/ultra/dora_webcam/plot.py
+   3: Traceback (most recent call last):
+        File "/Users/dave/dev/ultra/dora_webcam/plot.py", line 110, in on_event
+[
+          raw_bytes = bytes(value)
+  255,
+
+  255,
+      TypeError: 'pyarrow.lib.UInt8Scalar' object cannot be interpreted as an integer
+  255,
+
+  255,
+Location:
+  56,
+    binaries/runtime/src/operator/python.rs:29:9
+  2,
+  0,
+  0,
+  16,
+  0,
+  ...
+  0,
+  0,
+  255,
+  255,
+  255,
+  255,
+  0,
+  0,
+  0,
+  0
+]

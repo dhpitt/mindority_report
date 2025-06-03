@@ -1,0 +1,2 @@
+[2m2025-06-03T18:04:02.061994Z[0m [33m WARN[0m [2mdora_runtime[0m[2m:[0m received input op/tick for unknown operator
+received stop

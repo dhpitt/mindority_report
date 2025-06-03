@@ -1,0 +1,1624 @@
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
+img.shape=torch.Size([3, 192, 256])
+padh=64
+padw=0
+torch.Size([3, 320, 256])
