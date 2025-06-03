@@ -2,6 +2,7 @@ import time
 from dora import DoraStatus
 import pyarrow as pa
 import pyarrow.ipc as ipc
+import numpy as np
 
 import torch
 import torchvision.transforms.functional as tvtf
@@ -108,6 +109,9 @@ class Operator:
             value = dora_event["value"]
             if id == "image":
                 image = value.to_numpy().reshape((CAMERA_HEIGHT, CAMERA_WIDTH, 3)).copy()
+                ## reverse color channels
+                # opencv defaults to BGR, whereas mediapipe expects RGB
+                image = np.ascontiguousarray(image[:,:,::-1])
 
                 # preprocess image
                 #image, scale, pad = resize_pad_tensor(image)

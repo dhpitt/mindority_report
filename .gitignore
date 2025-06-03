@@ -1,2 +1,4 @@
 out/*
 *.lock
+**.pyc
+__pycache__
