@@ -79,7 +79,7 @@ class Operator:
     Taking webcam images from dataflow and running hand tracking/
     keypoint detection
 
-    TODO: Add pytorch shmem instead of loading to dev
+    TODO: Add pytorch shmem instead of loading to device
     """
 
     def __init__(self):
@@ -133,7 +133,7 @@ class Operator:
                 xc, yc, scale, theta = self.palm_detector.detection2roi(palm_detections.cpu())
                 img, affine, box = self.hand_regressor.extract_roi(image, xc, yc, theta, scale)
                 flags, handed, normalized_landmarks = self.hand_regressor(img.to(self.device))
-
+                print(f"{box.shape=}")
                 # xc, yc, scale, theta: floats
 
                 # denormalize landmarks to plot using affine transform
@@ -143,6 +143,7 @@ class Operator:
                 if len(flags) > 0:
                     hands_data = []
                     for i, flag in enumerate(flags):
+                        #if flag > 0.5:
                         hands_data.append(
                             make_hand_dict(box[i], flags[i], handed[i], landmarks[i])
                         )

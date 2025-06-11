@@ -10,8 +10,9 @@ import pyarrow.ipc as ipc
 import numpy as np
 
 import asyncio
+import threading
 import base64
-import websockets
+import websocket
 
 from torch_mediapipe.visualization import (HAND_CONNECTIONS, 
                                            draw_landmarks, 
@@ -19,11 +20,54 @@ from torch_mediapipe.visualization import (HAND_CONNECTIONS,
                                            draw_roi)
 
 CI = os.environ.get("CI")
+# for now, this is always true. 
+# let's find a better way of switching between opencv and webui
 
 CAMERA_WIDTH = 640
 CAMERA_HEIGHT = 480
 
 FONT = cv2.FONT_HERSHEY_SIMPLEX
+
+class WebSocketStreamer:
+    def __init__(self):
+        self.ws = websocket.WebSocket()
+        self.thread = threading.Thread(target=self._connect_loop, daemon=True)
+        self.queue = []
+        self.lock = threading.Lock()
+        self.thread.start()
+
+    def _connect_loop(self):
+        while True:
+            #try:
+            self.ws.connect("ws://localhost:8765")
+            while True:
+                if self.queue:
+                    with self.lock:
+                        frame = self.queue.pop(0)
+                    _, buffer = cv2.imencode(".jpg", frame)
+                    encoded = base64.b64encode(buffer).decode("utf-8")
+                    self.ws.send(encoded)
+                    print("Sending image", flush=True)
+                else:
+                    time.sleep(0.01)
+            '''except Exception as e:
+                print("WebSocket error:", e)
+                time.sleep(2)  # retry'''
+
+    def send(self, frame):
+        with self.lock:
+            self.queue.append(frame)
+
+
+from enum import Enum
+
+class CaptureMode(Enum):
+    DEFAULT = 0
+    DATASET = 1
+
+class CollectMode(Enum):
+    ROIS = 0
+    LANDMARKS = 1
 
 
 class Operator:
@@ -38,24 +82,9 @@ class Operator:
         self.submitted = []
 
         # Set up websocket for async comms w/frontend
-        self.websocket = None
-        self.loop = asyncio.get_event_loop()
-        self.ws_task = self.loop.create_task(self._setup_ws())
-    
-    async def _setup_ws(self):
-        try:
-            self.websocket = await websockets.connect("ws://localhost:8765")
-        except Exception as e:
-            print(f"WebSocket error: {e}")
-            self.websocket = None
-    
-
-    async def _send_frame(self, frame):
-        if self.websocket is None or self.websocket.closed:
-            await self._setup_ws()
-        _, buffer = cv2.imencode(".jpg", frame)
-        encoded = base64.b64encode(buffer).decode("utf-8")
-        await self.websocket.send(encoded)
+        #self.socket = WebSocketStreamer()
+        
+        self.mode = CaptureMode.DEFAULT
     
     def _draw_img(self, timestamp):
         """
@@ -78,9 +107,23 @@ class Operator:
 
         for hand in hands:
             landmarks = np.array(hand['landmarks'])
+            handed = hand['handed']
+            bbox = hand['box']
+            #print(bbox)
+            '''if handed > 0.5:
+                hand_color = (255,0,0)
+            else:
+                hand_color = (0,255,0)'''
             flag = hand['flag']
+
+            if self.mode == CaptureMode.DATASET:
+                hand_color = (255,0,0)
+            elif self.mode == CaptureMode.DEFAULT:
+                hand_color = (0,255,0)
             if flag > 0.9:
-                draw_landmarks(image, landmarks[:,:2], HAND_CONNECTIONS, size=2)
+                draw_roi(image, roi=bbox)
+                draw_landmarks(image, points=landmarks[:,:2], 
+                               connections=HAND_CONNECTIONS, size=2,line_color=hand_color)
         '''
         cv2.putText(
             image,
@@ -89,25 +132,14 @@ class Operator:
             FONT,
             0.5,
             (0, 255, 0),
-        )'''
-
-        cv2.putText(
-            image, self.buffer, (20, 14 + 21 * 14), FONT, 0.5, (190, 250, 0), 1
         )
-
-
         '''
-        # Legacy plotting via cv2.imshow
-        if CI != "true":
-        cv2.imshow("frame", image)
-        if cv2.waitKey(1) & 0xFF == ord("q"):
-            return DoraStatus.STOP
-        '''
-
+        
         # clear buffer of the step we plotted
         del self.images[timestamp]
         del self.detections[timestamp]
-        return image
+        # return mirrored image
+        return image[:, ::-1]
 
     def on_event(
         self,
@@ -131,7 +163,22 @@ class Operator:
                     annotated_img = self._draw_img(timestamp)
             
             if annotated_img is not None:
-                self.loop.create_task(self.send_frame(annotated_img))
+                #cv2.imwrite("data/latest.jpg", annotated_img)
+                
+                # Legacy plotting via cv2.imshow
+                if CI != "true":
+                    cv2.imshow("frame", annotated_img)
+                    k = cv2.waitKey(1)
+                    if k==27:    # Esc key to stop
+                        return DoraStatus.STOP
+                    elif k != -1:   # normally -1 returned,so don't print it
+                        if k == ord('a'):
+                            self.mode = CaptureMode.DATASET
+                        elif k == ord('b'):
+                            self.mode = CaptureMode.DEFAULT
+                else:
+                    self.socket.send(annotated_img)
+
                 
 
         return DoraStatus.CONTINUE
