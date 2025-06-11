@@ -13,10 +13,10 @@ nodes:
         image: webcam/image
       outputs:
         - detections
-      #send_stdout_as: logs
+      send_stdout_as: logs
   - id: plot
     operator:
-      python: plot.py
+      python: draw.py
       inputs:
         image: webcam/image
         hand_detections: hand_rec/detections
