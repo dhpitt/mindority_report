@@ -12,42 +12,8 @@ from torch_mediapipe.blazebase import resize_pad, denormalize_detections
 from torch_mediapipe.blazepalm import BlazePalm
 from torch_mediapipe.blazehand_landmark import BlazeHandLandmark
 
-
 CAMERA_WIDTH = 640
 CAMERA_HEIGHT = 480
-
-## helper functions for image processing
-
-def resize_pad_tensor(img: torch.Tensor, output_res=(256,256)):
-    c, h_0,w_0, = img.shape
-    goal_h, goal_w = output_res
-
-    if h_0>=w_0:
-        h1 = goal_h
-        w1 = goal_w * w_0 // h_0
-        padh = 0
-        padw = goal_w - w1
-        scale = w_0 / w1
-    else:
-        h1 = goal_h * h_0 // w_0
-        w1 = goal_w
-        padh = goal_h - h1
-        padw = 0
-        scale = h_0 / h1
-    
-    img = tvtf.resize(img, (h1,w1),
-                      interpolation=InterpolationMode.NEAREST)
-    padh1 = padh//2
-    padh2 = padh//2 + padh%2
-    padw1 = padw//2
-    padw2 = padw//2 + padw%2
-    # pad Left, Top, Right, Bottom acc to tvt.F
-    img = tvtf.pad(img, (padw1,padh1,padw2,padh2))
-
-    pad = (int(padh1 * scale), int(padw1 * scale))
-
-    
-    return img, scale, pad
 
 # pyarrow struct to send hand bbox
 
@@ -118,9 +84,10 @@ class Operator:
                 det_img, _, scale, pad = resize_pad(image)
 
                 ## detect palm and denormalize det
-                normalized_palm_detections = self.palm_detector.predict_on_image(det_img)
+                with torch.no_grad():
+                    normalized_palm_detections = self.palm_detector.predict_on_image(det_img)
 
-                palm_detections = denormalize_detections(normalized_palm_detections, scale, pad)
+                    palm_detections = denormalize_detections(normalized_palm_detections, scale, pad)
 
                 ## extract additional keypoints
                 # dtypes:
@@ -132,8 +99,8 @@ class Operator:
                 # normalized_landmarks: torch.tensor of shape (n_hands, 21, 3) of keypoints
                 xc, yc, scale, theta = self.palm_detector.detection2roi(palm_detections.cpu())
                 img, affine, box = self.hand_regressor.extract_roi(image, xc, yc, theta, scale)
-                flags, handed, normalized_landmarks = self.hand_regressor(img.to(self.device))
-                print(f"{box.shape=}")
+                with torch.no_grad():
+                    flags, handed, normalized_landmarks = self.hand_regressor(img.to(self.device))
                 # xc, yc, scale, theta: floats
 
                 # denormalize landmarks to plot using affine transform
@@ -142,8 +109,7 @@ class Operator:
                 # pack each detection (seen in `flags`) into my custom arrow struct
                 if len(flags) > 0:
                     hands_data = []
-                    for i, flag in enumerate(flags):
-                        #if flag > 0.5:
+                    for i in range(len(flags)):
                         hands_data.append(
                             make_hand_dict(box[i], flags[i], handed[i], landmarks[i])
                         )
