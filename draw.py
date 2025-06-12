@@ -116,9 +116,11 @@ class Operator:
             else:
                 # otherwise, label hands according to the handedness flag
                 if handed:
-                    hand_color = (0,255,0)
-                else:
+                    # left
                     hand_color = (0,0,255)
+                else:
+                    # right
+                    hand_color = (0,255,0)
 
             if flag > 0.9:
                 # capture handedness data

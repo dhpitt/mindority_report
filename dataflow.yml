@@ -13,8 +13,8 @@ nodes:
         image: webcam/image
       outputs:
         - detections
-      send_stdout_as: logs
-  - id: plot
+      #send_stdout_as: logs
+  - id: draw
     operator:
       python: draw.py
       inputs:
