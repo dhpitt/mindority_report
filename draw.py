@@ -27,7 +27,6 @@ class CaptureMode(Enum):
 class CollectMode(Enum):
     ROIS = 0
     LANDMARKS = 1
-    ALL = 2
 
 class HandedMode(Enum):
     LEFT = 0
@@ -46,7 +45,7 @@ CAPTURE_MODE_LABELS = {
 DATA_COLLECTION_MODE_LABELS = {
     CollectMode.ROIS: "ROIS",
     CollectMode.LANDMARKS: "HAND LANDMARKS",
-    CollectMode.ALL: "ROIS + LANDMARKS"
+    #CollectMode.ALL: "ROIS + LANDMARKS"
 }
 
 CI = os.environ.get("CI")
@@ -74,6 +73,7 @@ class Operator:
         
         self.capture_mode = CaptureMode.DEFAULT
         self.handed_mode = HandedMode.RIGHT
+        self.collection_mode = CollectMode.ROIS
     
     def _process_img(self, timestamp):
         """
@@ -107,10 +107,19 @@ class Operator:
                 hand_color = (0,255,0)'''
             flag = hand['flag']
 
-            if self.handed_mode == HandedMode.RIGHT:
-                hand_color = (0,255,0)
-            elif self.handed_mode == HandedMode.LEFT:
-                hand_color = (0,0,255)
+            # Color the hands according to the label we're assigning in the dataset
+            if self.collection_mode == CollectMode.ROIS:
+                if self.handed_mode == HandedMode.RIGHT:
+                    hand_color = (0,255,0)
+                elif self.handed_mode == HandedMode.LEFT:
+                    hand_color = (0,0,255)
+            else:
+                print(f"{handed=}")
+                # otherwise, label hands according to the handedness flag
+                if handed:
+                    hand_color = (0,255,0)
+                else:
+                    hand_color = (0,0,255)
 
             if flag > 0.9:
                 # capture handedness data
@@ -176,11 +185,19 @@ class Operator:
                                 fontScale=0.5,
                                 color=(255, 0, 0))
                     
+                    # show data collection mode
+                    collect_mode_text = DATA_COLLECTION_MODE_LABELS[self.collection_mode]
+                    cv2.putText(annotated_img, 
+                                text=f"Saving {collect_mode_text}",
+                                org=(50,80),fontFace=FONT,
+                                fontScale=0.5,
+                                color=(255, 0, 0))
+                    
                     # show handedness mode
                     handed_mode_text = HANDED_LABELS[self.handed_mode]
                     cv2.putText(annotated_img, 
                                 text=f"Recording {handed_mode_text} hand",
-                                org=(50,80),fontFace=FONT,
+                                org=(50,110),fontFace=FONT,
                                 fontScale=0.5,
                                 color=(255, 0, 0))
                     
@@ -201,6 +218,12 @@ class Operator:
                                 self.handed_mode = HandedMode.RIGHT
                             elif self.handed_mode == HandedMode.RIGHT:
                                 self.handed_mode = HandedMode.LEFT
+
+                        elif k == ord('c'):
+                            if self.collection_mode == CollectMode.ROIS:
+                                self.collection_mode = CollectMode.LANDMARKS
+                            elif self.collection_mode == CollectMode.LANDMARKS:
+                                self.collection_mode = CollectMode.ROIS
                 else:
                     self.socket.send(annotated_img)
 

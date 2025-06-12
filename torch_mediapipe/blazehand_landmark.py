@@ -109,7 +109,7 @@ class BlazeHandLandmark(BlazeLandmark):
         x = self.backbone8(x)
 
         hand_flag = self.hand_flag(x).view(-1).sigmoid()
-        handed = self.handed(x).view(-1).sigmoid()
+        handed = self.handed(x).view(-1)#.sigmoid()
         landmarks = self.landmarks(x).view(-1, 21, 3) / 256
 
         return hand_flag, handed, landmarks

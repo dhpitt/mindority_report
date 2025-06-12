@@ -29,27 +29,58 @@ def draw_detections(img, detections, with_keypoints=True):
     return img
 
 
-def draw_roi(img, roi):
-    for i in range(roi.shape[0]):
-        (x1,x2,x3,x4), (y1,y2,y3,y4) = roi[i]
-        cv2.line(img, (int(x1), int(y1)), (int(x2), int(y2)), (0,0,0), 2)
-        cv2.line(img, (int(x1), int(y1)), (int(x3), int(y3)), (0,255,0), 2)
-        cv2.line(img, (int(x2), int(y2)), (int(x4), int(y4)), (0,0,0), 2)
-        cv2.line(img, (int(x3), int(y3)), (int(x4), int(y4)), (0,0,0), 2)
+def draw_roi(img, roi, box_color=(0,0,0), handed_color=(0,255,0)):
+    (x1,x2,x3,x4), (y1,y2,y3,y4) = roi
+    cv2.line(img, (int(x1), int(y1)), (int(x2), int(y2)), box_color, 2)
+    cv2.line(img, (int(x1), int(y1)), (int(x3), int(y3)), handed_color, 2)
+    cv2.line(img, (int(x2), int(y2)), (int(x4), int(y4)), box_color, 2)
+    cv2.line(img, (int(x3), int(y3)), (int(x4), int(y4)), box_color, 2)
+
+def crop_from_corners(img, roi):
+    xs, ys = roi
+    # Convert to array of points
+    pts = np.array(list(zip(xs, ys)), dtype="float32")
+
+    # Define top edge as pts[0] to pts[2]
+    # So order is: top-left (0), top-right (2), bottom-right (3), bottom-left (1)
+    ordered = np.array([pts[0], pts[2], pts[3], pts[1]], dtype="float32")
+
+    # Compute width and height
+    widthA = np.linalg.norm(ordered[2] - ordered[3])
+    widthB = np.linalg.norm(ordered[1] - ordered[0])
+    maxWidth = int(max(widthA, widthB))
+
+    heightA = np.linalg.norm(ordered[1] - ordered[2])
+    heightB = np.linalg.norm(ordered[0] - ordered[3])
+    maxHeight = int(max(heightA, heightB))
+
+    # Destination rectangle
+    dst = np.array([
+        [0, 0],
+        [maxWidth - 1, 0],
+        [maxWidth - 1, maxHeight - 1],
+        [0, maxHeight - 1]
+    ], dtype="float32")
+
+    # Perspective transform
+    M = cv2.getPerspectiveTransform(ordered, dst)
+    warped = cv2.warpPerspective(img, M, (maxWidth, maxHeight))
+
+    return warped
 
 
-def draw_landmarks(img, points, connections=[], color=(0, 255, 0), size=2):
+def draw_landmarks(img, points, connections=[], line_color=(0,0,0), circle_color=(0, 255, 0), size=2):
     points = points[:,:2]
     for point in points:
         x, y = point
         x, y = int(x), int(y)
-        cv2.circle(img, (x, y), size, color, thickness=size)
+        cv2.circle(img, (x, y), size, circle_color, thickness=size)
     for connection in connections:
         x0, y0 = points[connection[0]]
         x1, y1 = points[connection[1]]
         x0, y0 = int(x0), int(y0)
         x1, y1 = int(x1), int(y1)
-        cv2.line(img, (x0, y0), (x1, y1), (0,0,0), size)
+        cv2.line(img, (x0, y0), (x1, y1), line_color, size)
 
 
 

@@ -63,6 +63,7 @@ class Operator:
         # load pretrained hand keypoint regression
         self.hand_regressor = BlazeHandLandmark().to(self.device)
         self.hand_regressor.load_weights("torch_mediapipe/blazehand_landmark.pth")
+        #self.hand_regressor.load_weights("torch_mediapipe/blazehand_landmark_trained_handedness.pth")
 
     def on_event(
         self,
