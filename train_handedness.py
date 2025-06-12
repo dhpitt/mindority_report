@@ -86,8 +86,8 @@ hand_regressor.handed.requires_grad_(True)
 
 hand_regressor = hand_regressor.to(device)
 
-N_EPOCHS = 10
-BATCH_SIZE = 16
+N_EPOCHS = 20
+BATCH_SIZE = 32
 LR = 3e-4
 DECAY = 1e-6
 
@@ -143,7 +143,7 @@ for ep in range(N_EPOCHS):
     print(f"\n[Epoch {ep}], avg loss {ep_loss:.2f} | val loss {avg_val_loss:.2f}, acc {acc:.2%}")
 
 torch.save(hand_regressor.handed.state_dict(), 
-           "torch_mediapipe/blazehand_handedness_cls.pth")
+           "torch_mediapipe/blazehand_handedness_cls_2.pth")
 
 
 

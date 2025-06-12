@@ -114,7 +114,6 @@ class Operator:
                 elif self.handed_mode == HandedMode.LEFT:
                     hand_color = (0,0,255)
             else:
-                print(f"{handed=}")
                 # otherwise, label hands according to the handedness flag
                 if handed:
                     hand_color = (0,255,0)
@@ -193,13 +192,14 @@ class Operator:
                                 fontScale=0.5,
                                 color=(255, 0, 0))
                     
-                    # show handedness mode
-                    handed_mode_text = HANDED_LABELS[self.handed_mode]
-                    cv2.putText(annotated_img, 
-                                text=f"Recording {handed_mode_text} hand",
-                                org=(50,110),fontFace=FONT,
-                                fontScale=0.5,
-                                color=(255, 0, 0))
+                    if self.collection_mode == CollectMode.ROIS:
+                        # show handedness mode if collecting hand ROIs
+                        handed_mode_text = HANDED_LABELS[self.handed_mode]
+                        cv2.putText(annotated_img, 
+                                    text=f"Recording {handed_mode_text} hand",
+                                    org=(50,110),fontFace=FONT,
+                                    fontScale=0.5,
+                                    color=(255, 0, 0))
                     
                     cv2.imshow("frame", annotated_img)
                     k = cv2.waitKey(1)

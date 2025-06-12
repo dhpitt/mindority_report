@@ -35,7 +35,7 @@ def make_hand_dict(box, flag, handed, landmarks):
     return {
         "box": tensor_to_list(box),               # shape (2,4)
         "flag": float(flag),                      # single float
-        "handed": int(handed),                    # single int
+        "handed": int(handed),                    # single float (needs sigmoid)
         "landmarks": tensor_to_list(landmarks)  # shape (21,3)
     }
 
@@ -63,6 +63,9 @@ class Operator:
         # load pretrained hand keypoint regression
         self.hand_regressor = BlazeHandLandmark().to(self.device)
         self.hand_regressor.load_weights("torch_mediapipe/blazehand_landmark.pth")
+        self.hand_regressor.handed.load_state_dict(
+            torch.load("torch_mediapipe/blazehand_handedness_cls_2.pth")
+            )
         #self.hand_regressor.load_weights("torch_mediapipe/blazehand_landmark_trained_handedness.pth")
 
     def on_event(
@@ -102,6 +105,7 @@ class Operator:
                 img, affine, box = self.hand_regressor.extract_roi(image, xc, yc, theta, scale)
                 with torch.no_grad():
                     flags, handed, normalized_landmarks = self.hand_regressor(img.to(self.device))
+                    handed = torch.nn.functional.sigmoid(handed) > 0.5
                 # xc, yc, scale, theta: floats
 
                 # denormalize landmarks to plot using affine transform
