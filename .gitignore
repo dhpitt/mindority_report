@@ -2,3 +2,6 @@ out/*
 *.lock
 **.pyc
 __pycache__
+
+data
+*.jpg

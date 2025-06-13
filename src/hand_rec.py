@@ -56,15 +56,15 @@ class Operator:
 
         # load pretrained palm detection model 
         self.palm_detector = BlazePalm().to(self.device)
-        self.palm_detector.load_weights("torch_mediapipe/blazepalm.pth")
-        self.palm_detector.load_anchors("torch_mediapipe/anchors_palm.npy")
+        self.palm_detector.load_weights("src/torch_mediapipe/blazepalm.pth")
+        self.palm_detector.load_anchors("src/torch_mediapipe/anchors_palm.npy")
         self.palm_detector.min_score_thresh = .75
 
         # load pretrained hand keypoint regression
         self.hand_regressor = BlazeHandLandmark().to(self.device)
-        self.hand_regressor.load_weights("torch_mediapipe/blazehand_landmark.pth")
+        self.hand_regressor.load_weights("src/torch_mediapipe/blazehand_landmark.pth")
         self.hand_regressor.handed.load_state_dict(
-            torch.load("torch_mediapipe/blazehand_handedness_cls_2.pth")
+            torch.load("src/torch_mediapipe/blazehand_handedness_cls_2.pth")
             )
         #self.hand_regressor.load_weights("torch_mediapipe/blazehand_landmark_trained_handedness.pth")
 

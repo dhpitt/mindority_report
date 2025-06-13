@@ -1,14 +1,14 @@
 nodes:
   - id: webcam
     operator:
-      python: webcam.py
+      python: src/webcam.py
       inputs:
         tick: dora/timer/millis/10
       outputs:
         - image
   - id: hand_rec
     operator:
-      python: hand_rec.py
+      python: src/hand_rec.py
       inputs:
         image: webcam/image
       outputs:
@@ -16,8 +16,14 @@ nodes:
       #send_stdout_as: logs
   - id: draw
     operator:
-      python: draw.py
+      python: src/draw.py
       inputs:
         image: webcam/image
         hand_detections: hand_rec/detections
       send_stdout_as: logs
+#  - id: process_detections
+#    operator:
+#      python: src/filter.py
+#      inputs:
+#        hand_detections: hand_rec/detections
+#      send_stdout_as: logs

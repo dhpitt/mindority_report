@@ -1,11 +1,10 @@
 import os
+from pathlib import Path
 import cv2
 import time
 from enum import Enum
 
 from dora import DoraStatus
-from utils import LABELS
-
 import pyarrow as pa
 import pyarrow.ipc as ipc
 import numpy as np
@@ -32,6 +31,13 @@ class HandedMode(Enum):
     LEFT = 0
     RIGHT = 1
 
+class Gesture(Enum):
+    NONE = 0
+    OPEN = 1
+    FIST = 2
+    POINTER = 3
+    FINGER_GUN = 4
+
 HANDED_LABELS = {
     HandedMode.RIGHT: "RIGHT",
     HandedMode.LEFT: "LEFT"
@@ -46,6 +52,14 @@ DATA_COLLECTION_MODE_LABELS = {
     CollectMode.ROIS: "ROIS",
     CollectMode.LANDMARKS: "HAND LANDMARKS",
     #CollectMode.ALL: "ROIS + LANDMARKS"
+}
+
+GESTURE_LABELS = {
+    Gesture.NONE: "NONE",
+    Gesture.OPEN: "Open",
+    Gesture.FIST: "Fist",
+    Gesture.POINTER: "Pointer",
+    Gesture.FINGER_GUN: "Fingergun"
 }
 
 CI = os.environ.get("CI")
@@ -73,7 +87,8 @@ class Operator:
         
         self.capture_mode = CaptureMode.DEFAULT
         self.handed_mode = HandedMode.RIGHT
-        self.collection_mode = CollectMode.ROIS
+        self.collection_mode = CollectMode.LANDMARKS
+        self.gesture_mode = 0
     
     def _process_img(self, timestamp):
         """
@@ -123,17 +138,33 @@ class Operator:
                     hand_color = (0,255,0)
 
             if flag > 0.9:
-                # capture handedness data
+                # save data when model is confident
                 if self.capture_mode == CaptureMode.DATASET:
-                    handedness_root = f"./data/handedness/{HANDED_LABELS[self.handed_mode]}/"
-                    n_imgs = len(os.listdir(handedness_root))
-                    roi_img = crop_from_corners(image, bbox)
-                    cv2.imwrite(f"{handedness_root}/{n_imgs+1}.jpg",
-                                roi_img)
+
+                    # in ROI mode, save an unannotated image of the entire ROI
+                    if self.collection_mode == CollectMode.ROIS:
+                        handedness_root = f"./data/handedness/{HANDED_LABELS[self.handed_mode]}/"
+                        n_imgs = len(os.listdir(handedness_root))
+                        roi_img = crop_from_corners(image, bbox)
+                        cv2.imwrite(f"{handedness_root}/{n_imgs+1}.jpg",
+                                    roi_img)
+                    
+
+                    # in landmark mode, save the landmark points as a 21x3 tensor
+                    elif self.collection_mode == CollectMode.LANDMARKS:
+                        gesture_root = Path(
+                            f"./data/gestures/{HANDED_LABELS[self.handed_mode]}{Gesture(self.gesture_mode).name}/"
+                        )
+                        if not gesture_root.exists():
+                            gesture_root.mkdir(parents=True)
+                        n_files = len([x for x in gesture_root.iterdir()])
+                        np.save(gesture_root / f"{n_files+1}.npy", landmarks)
+                    
                 
                 draw_roi(image, roi=bbox, handed_color=hand_color, box_color=(0,0,0))
                 draw_landmarks(image, points=landmarks[:,:2], 
                                connections=HAND_CONNECTIONS, size=2,line_color=hand_color)
+                #if CollectMode.LANDMARKS:
                 
                 
         
@@ -174,14 +205,14 @@ class Operator:
                 if self.images.get(timestamp, False):
                     annotated_img = self._process_img(timestamp)
             
+            # If there's no new image to show at this timestep, show 
             if annotated_img is not None:
-                #cv2.imwrite("data/latest.jpg", annotated_img)
                 # Legacy plotting via cv2.imshow
                 if CI != "true":
                     # show capture mode
                     capture_mode_text = CAPTURE_MODE_LABELS[self.capture_mode]
                     cv2.putText(annotated_img, 
-                                text=f"Mode: {capture_mode_text}",
+                                text=f"Mode: {capture_mode_text} (d)",
                                 org=(50,50),fontFace=FONT,
                                 fontScale=0.5,
                                 color=(255, 0, 0))
@@ -189,16 +220,24 @@ class Operator:
                     # show data collection mode
                     collect_mode_text = DATA_COLLECTION_MODE_LABELS[self.collection_mode]
                     cv2.putText(annotated_img, 
-                                text=f"Saving {collect_mode_text}",
+                                text=f"Saving {collect_mode_text} (c)",
                                 org=(50,80),fontFace=FONT,
                                 fontScale=0.5,
                                 color=(255, 0, 0))
                     
+                    
+                    # show handedness mode if collecting hand ROIs
+                    handed_mode_text = HANDED_LABELS[self.handed_mode]
                     if self.collection_mode == CollectMode.ROIS:
-                        # show handedness mode if collecting hand ROIs
-                        handed_mode_text = HANDED_LABELS[self.handed_mode]
                         cv2.putText(annotated_img, 
-                                    text=f"Recording {handed_mode_text} hand",
+                                    text=f"Recording {handed_mode_text} hand (h)",
+                                    org=(50,110),fontFace=FONT,
+                                    fontScale=0.5,
+                                    color=(255, 0, 0))
+                    elif self.collection_mode == CollectMode.LANDMARKS:
+                        gesture_mode_text = Gesture(self.gesture_mode).name
+                        cv2.putText(annotated_img, 
+                                    text=f"Recording gesture {handed_mode_text}->{gesture_mode_text} (h,g)",
                                     org=(50,110),fontFace=FONT,
                                     fontScale=0.5,
                                     color=(255, 0, 0))
@@ -226,9 +265,13 @@ class Operator:
                                 self.collection_mode = CollectMode.LANDMARKS
                             elif self.collection_mode == CollectMode.LANDMARKS:
                                 self.collection_mode = CollectMode.ROIS
+                        
+                        elif k == ord('g'):
+                            self.gesture_mode = (self.gesture_mode + 1) % len(Gesture)
                 else:
                     self.socket.send(annotated_img)
 
-                
+            '''else:
+                cv2.imshow("frame", value) '''   
 
         return DoraStatus.CONTINUE
